@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <script src="sketch.js"></script>
+    <script src="sim.js"></script>
+    <title>Schelling Sim</title>
+</head>
+<body>
+    <h1>Schelling Sim</h1>
+    <a href="https://en.wikipedia.org/wiki/Schelling%27s_model_of_segregation">More on Schelling's model</a>
+    <br><br>
+    <canvas id="canvas" width="1000" height="600"></canvas>
+    <div id="controls">
+        <h2>Controls</h2>
+        <input type="range" id="size" min="50" max="150" step="10" value="100" onChange="updateValue(event)">
+        <label for="size">Size : <span id="size-count">100</span></label>
+        <br>
+        <input type="range" id="populations" min="2" max="5" step="1" value="2" onChange="updateValue(event)">
+        <label for="populations">Populations : <span id="populations-count">2</span></label>
+        <br>
+        <input type="range" id="iterations" min="200" max="1000" step="1" value="750" onChange="updateValue(event)">
+        <label for="iterations">Maximum Iterations : <span id="iterations-count">750</span></label>
+        <br>
+        <label for="empty-precentage">Empty Cell Percentage:</label>
+        <input type="number" id="empty-percentage" min="0" max="100" step="1" value="10">%
+        <br>
+        <input type="checkbox" id="unbiased-toggle">
+        <label for="unbiased-toggle">Include unbiased population? (Purple, Populations > 2)</label>
+        <br>
+        <input type="checkbox" id="outline-toggle" checked>
+        <label for="outline-toggle">Outline complete populations</label>
+        <br>
+        <label for="speed">Iteration Speed:</label>
+        <input type="number" id="speed" min="1" max="1000" step="1" value="10"> ms
+        <br>
+        <a href="javascript:void" id="start" onClick="startSim()"><span id="play-arrow" class="material-icons-outlined">play_arrow</span></a>
+    </div>
+</body>
+</html>
