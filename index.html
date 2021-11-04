@@ -15,7 +15,6 @@
     <h1>Schelling Sim</h1>
     <a href="https://en.wikipedia.org/wiki/Schelling%27s_model_of_segregation">More on Schelling's model</a>
     <br><br>
-    <canvas id="canvas" width="1000" height="600"></canvas>
     <div id="controls">
         <h2>Controls</h2>
         <input type="range" id="size" min="50" max="150" step="10" value="100" onChange="updateValue(event)">
@@ -40,6 +39,7 @@
         <input type="number" id="speed" min="1" max="1000" step="1" value="10"> ms
         <br>
         <a href="javascript:void" id="start" onClick="startSim()"><span id="play-arrow" class="material-icons-outlined">play_arrow</span></a>
+        <canvas id="canvas" width="1000" height="600"></canvas>
     </div>
 </body>
 </html>

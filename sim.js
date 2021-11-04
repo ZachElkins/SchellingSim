@@ -33,7 +33,7 @@ class Sim {
         for (let i = 0; i < this.gridSize; i++) {
             for (let j = 0; j < this.gridSize; j++) {
                 if (this.grid[i][j] == -1) {
-                    ctx.fillStyle = "rgb(150, 150, 150)";
+                    ctx.fillStyle = "#aaa";
                 } else {
                     ctx.fillStyle = this.color[this.grid[i][j]];
                 }
